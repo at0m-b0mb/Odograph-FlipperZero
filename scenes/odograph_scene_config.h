@@ -1,0 +1,8 @@
+ADD_SCENE(odograph, start, Start)
+ADD_SCENE(odograph, sweep, Sweep)
+ADD_SCENE(odograph, sensor, Sensor)
+ADD_SCENE(odograph, expose, Expose)
+ADD_SCENE(odograph, garage, Garage)
+ADD_SCENE(odograph, learn, Learn)
+ADD_SCENE(odograph, settings, Settings)
+ADD_SCENE(odograph, about, About)

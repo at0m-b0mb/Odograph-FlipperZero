@@ -1,0 +1,23 @@
+App(
+    appid="odograph",
+    name="Odograph",
+    apptype=FlipperAppType.EXTERNAL,
+    entry_point="odograph_app",
+    stack_size=4 * 1024,
+    fap_category="Sub-GHz",
+    fap_icon="icons/odograph_10px.png",
+    fap_icon_assets="icons",
+    fap_author="at0m-b0mb",
+    fap_weburl="https://github.com/at0m-b0mb/Odograph-FlipperZero",
+    fap_version="1.0",
+    # Explicit, so the recursive default does not sweep test/ (host-only code)
+    # into the firmware build.
+    sources=[
+        "odograph.c",
+        "helpers/*.c",
+        "views/*.c",
+        "scenes/*.c",
+    ],
+    fap_description="Your car has a licence plate you cannot cover. Every tyre carries a pressure sensor with a permanent serial number, broadcast in the clear on 315 or 433.92 MHz whenever the wheel turns - no encryption, no rotation, no way to switch it off. Odograph listens for those broadcasts, decodes the serials from Ford, Renault, Citroen/Peugeot, Hyundai/Kia, Toyota and Schrader sensors, and shows you exactly how identifying they are: how many bits of identity are on the air, and how many of the world's 1.5 billion cars would answer to the same fingerprint. Save your own car to the garage and Odograph will recognise it days later - which is the whole point. Listen-only: it never transmits, replays or spoofs anything.",
+    requires=["gui"],
+)
